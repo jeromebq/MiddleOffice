@@ -29,7 +29,7 @@ public class Questionnaire {
         	
         	demandes.add(new Demande(id, question, reponses));
         	
-        	return "Ajouté";
+        	return "add";
         });
 
         get("/demandes", (request, response) -> {
@@ -43,7 +43,25 @@ public class Questionnaire {
         		obj.append("non", demande.getNon());
         	}
         	
-            return obj.toString();
+        	String affichage;
+        	
+        	affichage = "<!DOCTYPE html>"+
+        	"<html>"+
+        	  "<head>"+
+        	    "<title>Affichage des demandes</title>"+
+        	    "<meta charset=\"utf-8\">"+
+        	  "</head>"+
+        	  "<body>"+
+        	  "<ul>";
+        	  for (Demande demande : demandes){
+        		  affichage += "<li><a href=\"/demandes/" + demande.getID() + "\">" + demande.getQuestion() + "</a></li>"; 
+        	  }
+        	  affichage +="</ul>"+
+        	  "</body>"+
+        	"</html>";
+        	  
+        	  return affichage;
+            //return obj.toString();
         });
         
         post("/demandes/:id", (request, response) -> {
@@ -56,7 +74,7 @@ public class Questionnaire {
         				demande.addNon();
         	}
 
-        	return "Voté";
+        	return "veto";
         });
        
     }
