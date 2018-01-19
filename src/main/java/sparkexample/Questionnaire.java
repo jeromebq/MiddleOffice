@@ -54,7 +54,13 @@ public class Questionnaire {
         	  "<body>"+
         	  "<ul>";
         	  for (Demande demande : demandes){
-        		  affichage += "<li><a href=\"/demandes/" + demande.getID() + "\">" + demande.getQuestion() + "</a></li>"; 
+        		  affichage += "<li><a href=\"/demandes/" + demande.getID() + "\">" + demande.getQuestion() + "</a></li>";
+        		  affichage += "<ul>";
+        		  for (String rep : demande.getReponses()){
+        			  affichage += "<li>" + rep + "</li>";
+        		  }
+        		  affichage += "</ul>";
+
         	  }
         	  affichage +="</ul>"+
         	  "</body>"+
