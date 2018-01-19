@@ -1,8 +1,8 @@
 package sparkexample;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class DemandeTest {
 
@@ -12,7 +12,7 @@ class DemandeTest {
 		//Creation classe demande
 		String[] reponses = {"Bleu", "Rouge", "Jaune", "Vert"};
 		
-		Demande demande = new Demande("Quelle est votre couleur preferee ?", reponses);
+		Demande demande = new Demande("94984984", "Quelle est votre couleur preferee ?", reponses);
 		
 		//Test de la methode getQuestion
 		assertEquals(demande.getQuestion(), "Quelle est votre couleur preferee ?");

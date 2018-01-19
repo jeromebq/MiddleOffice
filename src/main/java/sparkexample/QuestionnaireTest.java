@@ -1,8 +1,6 @@
 package sparkexample;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class QuestionnaireTest {
 
@@ -12,7 +10,7 @@ class QuestionnaireTest {
 		//Creation classe demande
 		String[] reponses = {"Bleu", "Rouge", "Jaune", "Vert"};
 				
-		Demande demande = new Demande("Quelle est votre couleur preferee ?", reponses);
+		Demande demande = new Demande("6546884", "Quelle est votre couleur preferee ?", reponses);
 		
 		//Creation classe questionnaire
 		Questionnaire quest = new Questionnaire();
