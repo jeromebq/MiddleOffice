@@ -3,17 +3,18 @@ package sparkexample;
 public class Demande {
 	private String id;
 	private String question;
-	private String[] reponses;
-	private int oui;
-	private int non;
+	private String chargeutile;
+	private String ouiadresse;
+	private String nonadresse;
+	private boolean vote = false;
 	
-	public Demande (String id, String question, String[] reponses)
+	public Demande (String id, String question, String chargeutile, String ouiadresse, String nonadresse)
 	{
 		this.id = id;
 		this.question = question;
-		this.reponses = reponses;
-		this.oui = 0;
-		this.non = 0;
+		this.chargeutile = chargeutile;
+		this.ouiadresse = ouiadresse;
+		this.nonadresse = nonadresse;
 	}
 	
 	public String getID() {
@@ -24,23 +25,23 @@ public class Demande {
 		return this.question;
 	}
 	
-	public String[] getReponses() {
-		return this.reponses;
+	public String getChargeutile() {
+		return this.chargeutile;
 	}
 	
-	public int getOui() {
-		return this.oui;
+	public String getOuiadresse() {
+		return this.ouiadresse;
 	}
 	
-	public int getNon() {
-		return this.non;
+	public String getNonadresse() {
+		return this.nonadresse;
 	}
 	
-	public void addOui() {
-		oui++;
+	public boolean getVote() {
+		return this.vote;
 	}
 	
-	public void addNon() {
-		non++;
+	public void setVote() {
+		vote = true;
 	}
 }
