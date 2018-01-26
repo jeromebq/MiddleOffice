@@ -39,7 +39,7 @@ public class Questionnaire {
         			"<input type=\"text\" name=\"urlsinon\" id=\"urlsinon\" />"+
         			"</p>"+
         		"</form>"+
-        		"<form action=\"accueil.html\">"+
+        		"<form action=\"/demandes\">"+
         			"<input type=\"submit\" value=\"Creer la demande\" />"+
         		"</form>"+
         		"<form action=\"/demandes\">"+
@@ -65,12 +65,6 @@ public class Questionnaire {
         });
 
         get("/demandes", (request, response) -> {
-        	JSONObject obj = new JSONObject();
-        	
-        	for (Demande demande : demandes){
-        		obj.append("id", demande.getID());
-        		obj.append("question", demande.getQuestion());
-        	}
         	
         	String affichage;
         	
