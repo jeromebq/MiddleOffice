@@ -36,7 +36,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>sparkexample.Questionnaire</mainClass>
+              <mainClass>sparkexample.Test</mainClass>
               <classpathPrefix>dependency-jars/</classpathPrefix>
             </manifest>
           </archive>
@@ -67,7 +67,7 @@
               </descriptorRefs>
               <archive>
                 <manifest>
-                  <mainClass>sparkexample.Questionnaire</mainClass>
+                  <mainClass>sparkexample.Test</mainClass>
                 </manifest>
               </archive>
             </configuration>
