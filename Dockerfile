@@ -1,7 +1,4 @@
-FROM java:8 
-
-# Install maven
-RUN apt-get update && apt-get install -y maven
+FROM maven:3.5
 
 WORKDIR /code
 
